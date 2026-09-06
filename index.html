@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PSTEEL | MC, Productor y Beatmaker de Ciudad Juárez</title>
+
+<meta name="description"
+content="Biografía, trayectoria, música y archivo histórico de PSTEEL, MC, productor y beatmaker de Ciudad Juárez, Chihuahua.">
+
+<meta name="keywords"
+content="PSTEEL, MC Steel, MCSTEEL09, Ciudad Juárez, Hip Hop, rap, D.U.B. Crew, Lado Privado">
+
+<meta name="author" content="PSTEEL">
+
+<style>
+
+:root{
+    --bg:#08090c;
+    --panel:#101217;
+    --panel2:#151820;
+    --line:#292d36;
+    --text:#f3f4f6;
+    --muted:#9da3ad;
+    --accent:#ffffff;
+    --max:1100px;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    padding-top:64px;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:64px;
+    background:rgba(8,9,12,.96);
+    border-bottom:1px solid var(--line);
+    z-index:1000;
+    backdrop-filter:blur(10px);
+}
+
+.nav-inner{
+    max-width:var(--max);
+    height:100%;
+    margin:auto;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:2px;
+    white-space:nowrap;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    font-size:13px;
+}
+
+.nav-links a{
+    color:var(--muted);
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:var(--text);
+}
+
+.search{
+    width:190px;
+}
+
+.search input{
+    width:100%;
+    background:var(--panel);
+    color:var(--text);
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:8px 10px;
+    outline:none;
+}
+
+.search input:focus{
+    border-color:#555b66;
+}
+
+header{
+    border-bottom:1px solid var(--line);
+    padding:100px 20px 90px;
+}
+
+.hero{
+    max-width:var(--max);
+    margin:auto;
+}
+
+.eyebrow{
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:18px;
+}
+
+h1{
+    font-size:clamp(54px,10vw,110px);
+    line-height:.9;
+    letter-spacing:-5px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:720px;
+    color:var(--muted);
+    font-size:18px;
+}
+
+.hero-meta{
+    margin-top:35px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    border:1px solid var(--line);
+    background:var(--panel);
+    padding:7px 12px;
+    font-size:12px;
+    color:var(--muted);
+}
+
+main{
+    max-width:var(--max);
+    margin:auto;
+    padding:20px;
+}
+
+section{
+    padding:75px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.section-number{
+    color:#626873;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+h2{
+    font-size:34px;
+    line-height:1.1;
+    margin-bottom:28px;
+}
+
+h3{
+    font-size:20px;
+    margin:32px 0 12px;
+}
+
+p{
+    margin-bottom:18px;
+}
+
+.text{
+    max-width:850px;
+}
+
+.muted{
+    color:var(--muted);
+}
+
+blockquote{
+    border-left:3px solid #777;
+    padding:18px 25px;
+    margin:30px 0;
+    background:var(--panel);
+    font-size:20px;
+    font-style:italic;
+}
+
+.timeline{
+    display:grid;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+}
+
+.timeline-item{
+    background:var(--panel);
+    padding:22px;
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:25px;
+}
+
+.year{
+    font-weight:900;
+    font-size:18px;
+}
+
+.catalog{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+}
+
+.card{
+    background:var(--panel);
+    padding:25px;
+}
+
+.card strong{
+    display:block;
+    margin-bottom:7px;
+}
+
+.card span{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.list{
+    columns:2;
+    column-gap:50px;
+}
+
+.list li{
+    margin:8px 0;
+    color:#d6d8dc;
+}
+
+.identity{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+}
+
+.identity div{
+    background:var(--panel);
+    padding:30px;
+}
+
+.identity strong{
+    font-size:22px;
+}
+
+.arrow{
+    color:#666;
+    text-align:center;
+    font-size:25px;
+    padding:10px;
+}
+
+footer{
+    max-width:var(--max);
+    margin:auto;
+    padding:50px 20px 80px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.back-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:42px;
+    height:42px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    color:var(--text);
+    cursor:pointer;
+    border-radius:4px;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
+    z-index:999;
+}
+
+.back-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.highlight{
+    background:#fff;
+    color:#000;
+    padding:0 2px;
+}
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-inner{
+        gap:10px;
+    }
+
+    .search{
+        width:170px;
+    }
+
+    h1{
+        letter-spacing:-3px;
+    }
+
+    .identity{
+        grid-template-columns:1fr;
+    }
+
+    .list{
+        columns:1;
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
+}
+
+@media(max-width:500px){
+
+    body{
+        padding-top:58px;
+    }
+
+    nav{
+        height:58px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .search{
+        width:145px;
+    }
+
+    .search input{
+        font-size:12px;
+    }
+
+    header{
+        padding:75px 20px 65px;
+    }
+
+    section{
+        padding:55px 0;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav id="topNav">
+<div class="nav-inner">
+
+<div class="logo">PSTEEL</div>
+
+<div class="nav-links">
+<a href="#biografia">Biografía</a>
+<a href="#cronologia">Cronología</a>
+<a href="#catalogo">Catálogo</a>
+<a href="#produccion">Producción</a>
+<a href="#colaboraciones">Colaboraciones</a>
+</div>
+
+<div class="search">
+<input
+id="searchInput"
+type="search"
+placeholder="Buscar en el archivo..."
+aria-label="Buscar en el archivo">
+</div>
+
+</div>
+</nav>
+
+<header>
+
+<div class="hero">
+
+<div class="eyebrow">Archivo histórico · Hip Hop · Ciudad Juárez</div>
+
+<h1>PSTEEL</h1>
+
+<p>
+MC, letrista, productor musical y beatmaker originario de
+<strong>Ciudad Juárez, Chihuahua, México.</strong>
+</p>
+
+<div class="hero-meta">
+<div class="tag">MC</div>
+<div class="tag">LETRISTA</div>
+<div class="tag">PRODUCTOR</div>
+<div class="tag">BEATMAKER</div>
+<div class="tag">HIP HOP UNDERGROUND</div>
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<section id="biografia">
+
+<div class="section-number">01 · BIOGRAFÍA</div>
+
+<h2>Historia, lírica y producción</h2>
+
+<div class="text">
+
+<p>
+<strong>PSTEEL</strong> es un MC, letrista, productor musical y beatmaker
+originario de <strong>Ciudad Juárez, Chihuahua, México.</strong>
+Su trayectoria se desarrolla dentro del Hip Hop underground de la frontera
+norte y está vinculada a nombres y espacios como
+<strong>D.U.B. Crew</strong> y <strong>Lado Privado.</strong>
+</p>
+
+<p>
+Antes de adoptar la identidad PSTEEL, desarrolló una etapa artística bajo
+el nombre <strong>MC Steel.</strong> Durante esos años utilizó
+<strong>MCSTEEL09</strong> como usuario en Internet, una identidad digital
+que actualmente permite localizar parte de sus primeros registros musicales.
+</p>
+
+<p>
+Su historia pertenece a una generación de artistas que desarrolló el Hip Hop
+independiente durante una época en la que grabar, producir y distribuir música
+requería recursos, infraestructura y redes de colaboración muy diferentes
+a las actuales.
+</p>
+
+</div>
+
+</section>
+
+<section id="primeros">
+
+<div class="section-number">02 · PRIMEROS AÑOS</div>
+
+<h2>Los primeros años</h2>
+
+<div class="text">
+
+<p>
+De acuerdo con el propio PSTEEL, su acercamiento a la escritura dentro del
+Hip Hop comenzó en <strong>2003</strong> y sus primeras grabaciones se
+realizaron alrededor de <strong>2005.</strong>
+</p>
+
+<p>
+Estas fechas forman parte de su testimonio personal y quedan como parte de
+la reconstrucción de su trayectoria. La documentación pública disponible
+permite comenzar a seguir sus huellas con mayor claridad a partir de la
+segunda mitad de la década de 2000.
+</p>
+
+<p>
+En <strong>2006</strong> aparecen registros audiovisuales relacionados con
+<strong>D.U.B. Crew</strong> y <strong>Lado Privado</strong> en Ciudad Juárez.
+Entre ellos se encuentra material identificado como
+<em>Delincuentes Urbanos (Remix), Vol. 2</em>, fechado en 2006.
+</p>
+
+<p>
+Este material constituye una de las referencias históricas que permiten
+contextualizar la escena en la que se desarrolló la primera etapa de MC Steel.
+</p>
+
+</div>
+
+</section>
+
+<section id="identidades">
+
+<div class="section-number">03 · IDENTIDADES</div>
+
+<h2>MC Steel y MCSTEEL09</h2>
+
+<div class="text">
+
+<p>
+Una parte importante para reconstruir los primeros años de PSTEEL consiste
+en distinguir entre su <strong>nombre artístico</strong> y su
+<strong>identidad digital.</strong>
+</p>
+
+<div class="identity">
+
+<div>
+<strong>MC Steel</strong>
+<p class="muted">Nombre utilizado como artista durante una etapa temprana.</p>
+</div>
+
+<div>
+<strong>MCSTEEL09</strong>
+<p class="muted">Usuario utilizado en Internet durante aquella época.</p>
+</div>
+
+<div>
+<strong>PSTEEL</strong>
+<p class="muted">Identidad artística posterior.</p>
+</div>
+
+</div>
+
+<p>
+Esta identidad aparece asociada a un perfil histórico de Myspace que conserva
+material musical de aquella época, incluyendo canciones como
+<strong>“El Conekte”, “Busco” y “Quién Regresa”.</strong>
+</p>
+
+<p>
+La transición <strong>MC Steel → PSTEEL</strong> forma parte de la propia
+historia del artista y no debe interpretarse como dos carreras independientes.
+</p>
+
+</div>
+
+</section>
+
+<section id="dub">
+
+<div class="section-number">04 · D.U.B. CREW</div>
+
+<h2>D.U.B. Crew y Lado Privado</h2>
+
+<div class="text">
+
+<p>
+La trayectoria de PSTEEL está estrechamente relacionada con
+<strong>D.U.B. Crew</strong> y <strong>Lado Privado</strong>, dentro del
+circuito underground de Ciudad Juárez.
+</p>
+
+<p>
+Los registros disponibles permiten identificar diferentes producciones
+asociadas con D.U.B. Crew durante la segunda mitad de los años 2000 y
+principios de la década siguiente.
+</p>
+
+<div class="catalog">
+
+<div class="card">
+<strong>Vol. 1</strong>
+<span>2006</span>
+</div>
+
+<div class="card">
+<strong>Vol. 2</strong>
+<span>2007</span>
+</div>
+
+<div class="card">
+<strong>Vol. 3</strong>
+<span>2008</span>
+</div>
+
+<div class="card">
+<strong>Solo una Muestra</strong>
+<span>2009</span>
+</div>
+
+<div class="card">
+<strong>The Soundtrack</strong>
+<span>2011</span>
+</div>
+
+</div>
+
+<p style="margin-top:25px;">
+La relación con Lado Privado no se limita a la interpretación. El proyecto
+también aparece asociado con procesos de producción y trabajo técnico
+relacionados con las grabaciones.
+</p>
+
+<p>
+Esta combinación de MC, producción y trabajo de estudio se convertiría en
+una característica importante de la trayectoria de PSTEEL.
+</p>
+
+</div>
+
+</section>
+
+<section id="cronologia">
+
+<div class="section-number">05 · CRONOLOGÍA</div>
+
+<h2>El archivo musical</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="year">2007</div>
+<div>
+<strong>Expresión de Líneas</strong><br>
+<strong>Freestyle</strong><br>
+<strong>Temporales</strong><br>
+<strong>Desahogo</strong><br>
+<strong>Qué Viene</strong>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="year">2008</div>
+<div>
+<strong>MC Steel y Mila – Freestyle</strong>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="year">2009</div>
+<div>
+<strong>Golpes Rítmicos</strong> — feat. Doble N<br>
+<strong>Crudas Realidades</strong>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="year">2010</div>
+<div>
+<strong>Busco</strong><br>
+<strong>Quién Regresa</strong><br>
+<strong>El Conekte</strong> — feat. Wooker &amp; Doble N<br>
+<strong>Dogmatismo</strong>
+</div>
+</div>
+
+</div>
+
+<p class="muted" style="margin-top:25px;">
+No todas estas piezas deben considerarse necesariamente como parte de un
+álbum formal. Algunas corresponden a grabaciones individuales o material
+cuyo contexto original todavía debe ser determinado.
+</p>
+
+</section>
+
+<section id="catalogo">
+
+<div class="section-number">06 · CATÁLOGO</div>
+
+<h2>Material asociado a MC Steel / PSTEEL</h2>
+
+<div class="catalog">
+
+<div class="card"><strong>Expresión de Líneas</strong></div>
+<div class="card"><strong>Freestyle</strong></div>
+<div class="card"><strong>Temporales</strong></div>
+<div class="card"><strong>Desahogo</strong></div>
+<div class="card"><strong>Qué Viene</strong></div>
+<div class="card"><strong>MC Steel y Mila – Freestyle</strong></div>
+<div class="card"><strong>Crudas Realidades</strong></div>
+<div class="card"><strong>Golpes Rítmicos</strong></div>
+<div class="card"><strong>Busco</strong></div>
+<div class="card"><strong>Quién Regresa</strong></div>
+<div class="card"><strong>Dogmatismo</strong></div>
+<div class="card"><strong>El Conekte</strong></div>
+<div class="card"><strong>El Plan Maestro</strong></div>
+<div class="card"><strong>Estado de Emergencia</strong></div>
+<div class="card"><strong>Lenguaje Roto</strong></div>
+<div class="card"><strong>Mi Forma de Vida</strong></div>
+<div class="card"><strong>Mira Quién</strong></div>
+<div class="card"><strong>Rap por Convicción</strong></div>
+<div class="card"><strong>This Is My Flow</strong></div>
+<div class="card"><strong>Carta</strong></div>
+<div class="card"><strong>Deadly Lecture</strong></div>
+
+</div>
+
+</section>
+
+<section id="produccion">
+
+<div class="section-number">07 · PRODUCCIÓN</div>
+
+<h2>Trabajo detrás del micrófono</h2>
+
+<div class="text">
+
+<p>
+PSTEEL no se ha limitado al papel de MC.
+</p>
+
+<p>
+Su trayectoria incluye trabajo como <strong>beatmaker, productor musical,
+mezclador y responsable de procesos de masterización.</strong>
+</p>
+
+<p>
+Una parte de su actividad se desarrolló alrededor de Lado Privado,
+participando en la creación de ritmos y en diferentes etapas de producción
+musical.
+</p>
+
+<p>
+Entre los créditos documentados aparece su participación en proyectos de
+otros artistas, incluyendo trabajos donde <strong>Lado Privado (Psteel)</strong>
+figura relacionado con mezcla y masterización.
+</p>
+
+<p>
+Esta faceta técnica permite entender su trayectoria desde una perspectiva
+más amplia: PSTEEL no solamente ha escrito y grabado canciones, también ha
+participado en la construcción sonora de producciones.
+</p>
+
+</div>
+
+</section>
+
+<section id="estilo">
+
+<div class="section-number">08 · ESTILO</div>
+
+<h2>Estilo y escritura</h2>
+
+<div class="text">
+
+<p>
+Musicalmente, la obra de PSTEEL se mueve dentro de diferentes vertientes
+del Rap underground, con elementos de <strong>boom bap, hardcore y una
+marcada orientación lírica.</strong>
+</p>
+
+<ul class="list">
+
+<li>Experiencias personales</li>
+<li>Vida urbana y realidad de frontera</li>
+<li>Competencia lírica</li>
+<li>Introspección</li>
+<li>Filosofía</li>
+<li>Psicología</li>
+<li>Crítica social</li>
+<li>Conflictos personales</li>
+<li>Observación de la realidad</li>
+<li>Identidad y forma de vida</li>
+
+</ul>
+
+<blockquote>
+“Soy un tipo que hace música Rap y vive Hip Hop de una manera personal.”
+</blockquote>
+
+<p>
+La frase refleja una posición artística basada más en la experiencia y la
+expresión personal que en la necesidad de pertenecer a una etiqueta determinada.
+</p>
+
+</div>
+
+</section>
+
+<section id="colaboraciones">
+
+<div class="section-number">09 · COLABORACIONES</div>
+
+<h2>Colaboraciones</h2>
+
+<div class="catalog">
+
+<div class="card"><strong>Doble N</strong></div>
+<div class="card"><strong>Wooker</strong></div>
+<div class="card"><strong>Mila</strong></div>
+<div class="card"><strong>Diecioch8</strong></div>
+<div class="card"><strong>Doble Style</strong></div>
+<div class="card"><strong>Poetas Insurrectos</strong></div>
+<div class="card"><strong>S.D.A.</strong></div>
+<div class="card"><strong>Lzd</strong></div>
+<div class="card"><strong>OLV</strong></div>
+<div class="card"><strong>Batallones Femeninos</strong></div>
+
+</div>
+
+<p class="muted" style="margin-top:25px;">
+Estas colaboraciones forman parte del contexto colectivo del Hip Hop
+independiente de Ciudad Juárez y permiten reconstruir las conexiones entre
+distintos artistas y productores de la época.
+</p>
+
+</section>
+
+<section id="archivo">
+
+<div class="section-number">10 · ARCHIVO</div>
+
+<h2>Una discografía todavía en reconstrucción</h2>
+
+<div class="text">
+
+<p>
+El catálogo de PSTEEL no está concentrado en una sola fuente.
+</p>
+
+<p>
+Parte de su música se encuentra en archivos de audio, plataformas antiguas,
+perfiles de Internet, videos y registros conservados por colaboradores.
+</p>
+
+<p>
+Por eso, la discografía actualmente identificada debe entenderse como un
+<strong>archivo en proceso de reconstrucción.</strong>
+</p>
+
+<h3>De MC Steel a PSTEEL</h3>
+
+<div class="identity">
+
+<div>
+<strong>MC Steel</strong>
+<p class="muted">Etapa temprana como MC.</p>
+</div>
+
+<div>
+<strong>MCSTEEL09</strong>
+<p class="muted">Huella digital de aquella época.</p>
+</div>
+
+<div>
+<strong>PSTEEL</strong>
+<p class="muted">Identidad artística posterior.</p>
+</div>
+
+</div>
+
+<h3>Una historia todavía abierta</h3>
+
+<p>
+La biografía de PSTEEL continúa en construcción.
+</p>
+
+<p>
+Las fechas de <strong>2003 y 2005</strong>, correspondientes respectivamente
+al inicio de su escritura y sus primeras grabaciones según su propio testimonio,
+deberán integrarse posteriormente con entrevistas, archivos originales y otras
+fuentes que permitan documentarlas con mayor precisión.
+</p>
+
+<p>
+Del mismo modo, todavía queda trabajo por realizar para determinar el orden
+exacto de algunas grabaciones, identificar proyectos originales, distinguir
+versiones y recuperar material audiovisual de los primeros años.
+</p>
+
+<p>
+Lo que ya puede reconstruirse es una trayectoria que atraviesa más de una
+etapa del Hip Hop independiente de Ciudad Juárez.
+</p>
+
+<p>
+Desde <strong>MC Steel</strong>, pasando por la identidad digital
+<strong>MCSTEEL09</strong>, hasta <strong>PSTEEL</strong>, el archivo muestra
+una continuidad basada en la escritura, la producción, el trabajo de estudio
+y una relación personal con el Hip Hop.
+</p>
+
+<p>
+No se trata solamente de recuperar canciones antiguas.
+</p>
+
+<p>
+Se trata de recuperar una parte de la historia de una generación de artistas
+que construyó su música cuando la escena underground dependía mucho más de
+los propios artistas, sus equipos, sus estudios, sus CDs, sus computadoras
+y sus redes de colaboración.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<strong>PSTEEL</strong><br>
+MC · Letrista · Productor · Beatmaker<br>
+Ciudad Juárez, Chihuahua, México
+
+<br><br>
+
+Archivo biográfico y musical en construcción.
+
+</footer>
+
+<button
+id="backToTop"
+class="back-top"
+aria-label="Volver arriba">
+↑
+</button>
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const sections = document.querySelectorAll("main section");
+const backToTop = document.getElementById("backToTop");
+
+searchInput.addEventListener("input", function(){
+
+    const query = this.value.trim().toLowerCase();
+
+    document.querySelectorAll(".highlight").forEach(el=>{
+        el.outerHTML = el.innerHTML;
+    });
+
+    if(!query) return;
+
+    for(const section of sections){
+
+        const text = section.innerText.toLowerCase();
+
+        if(text.includes(query)){
+
+            section.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+            break;
+        }
+    }
+
+});
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 500){
+        backToTop.classList.add("show");
+    }else{
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop.addEventListener("click",()=>{
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+</script>
+
+</body>
+</html>
