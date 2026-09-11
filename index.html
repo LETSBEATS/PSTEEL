@@ -114,12 +114,32 @@ nav{
     border-color:#555b66;
 }
 
+/* =========================
+   ENCABEZADO CON FONDO
+   ========================= */
+
 header{
+    position:relative;
+    overflow:hidden;
     border-bottom:1px solid var(--line);
     padding:100px 20px 90px;
+    background:#08090c;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url("FONDO%20MIC.PNG");
+    background-size:cover;
+    background-position:center;
+    opacity:.22;
+    filter:grayscale(100%);
 }
 
 .hero{
+    position:relative;
+    z-index:1;
     max-width:var(--max);
     margin:auto;
 }
@@ -154,7 +174,7 @@ h1{
 
 .tag{
     border:1px solid var(--line);
-    background:var(--panel);
+    background:rgba(16,18,23,.88);
     padding:7px 12px;
     font-size:12px;
     color:var(--muted);
@@ -287,6 +307,38 @@ blockquote{
     padding:10px;
 }
 
+/* =========================
+   IMÁGENES DEL ARCHIVO
+   ========================= */
+
+.archivo-img{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    display:block;
+    margin:35px auto;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+
+.archivo-caption{
+    max-width:900px;
+    margin:-20px auto 30px;
+    color:var(--muted);
+    font-size:13px;
+    text-align:center;
+}
+
+.produccion-img{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    display:block;
+    margin:35px auto;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+
 footer{
     max-width:var(--max);
     margin:auto;
@@ -392,6 +444,12 @@ footer{
     .hero p{
         font-size:16px;
     }
+
+    .archivo-img,
+    .produccion-img{
+        margin:25px auto;
+    }
+
 }
 
 </style>
@@ -515,6 +573,17 @@ Entre ellos se encuentra material identificado como
 <p>
 Este material constituye una de las referencias históricas que permiten
 contextualizar la escena en la que se desarrolló la primera etapa de MC Steel.
+</p>
+
+<!-- FOTO PSTEEL 2008 -->
+
+<img
+src="FOTO1.JPG"
+alt="PSTEEL en 2008"
+class="archivo-img">
+
+<p class="archivo-caption">
+PSTEEL · Ciudad Juárez · 2008
 </p>
 
 </div>
@@ -748,6 +817,17 @@ musical.
 Entre los créditos documentados aparece su participación en proyectos de
 otros artistas, incluyendo trabajos donde <strong>Lado Privado (Psteel)</strong>
 figura relacionado con mezcla y masterización.
+</p>
+
+<!-- FOTO PSTEEL 2011 -->
+
+<img
+src="pstel%20mezcla.PNG"
+alt="PSTEEL en 2011"
+class="produccion-img">
+
+<p class="archivo-caption">
+PSTEEL · Producción / mezcla · 2011
 </p>
 
 <p>
