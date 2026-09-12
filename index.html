@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -340,77 +341,103 @@ blockquote{
 }
 
 /* =========================
-   LOGOS D.U.B. CREW
+   GALERÍAS
    ========================= */
+
+.gallery-title{
+    margin:45px 0 18px;
+    color:var(--muted);
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
 
 .logo-gallery{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin:35px 0;
+    gap:15px;
+    margin-bottom:35px;
 }
 
 .logo-gallery img{
     width:100%;
     height:auto;
     display:block;
-    background:var(--panel);
-    padding:20px;
-}
-
-/* =========================
-   GALERÍA FOTOGRÁFICA
-   ========================= */
-
-.photo-gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1px;
-    background:var(--line);
     border:1px solid var(--line);
-    margin:35px 0;
-}
-
-.photo-gallery img{
-    width:100%;
-    height:auto;
-    display:block;
     background:var(--panel);
 }
-
-/* =========================
-   PORTADAS
-   ========================= */
 
 .cover-gallery{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin:35px 0;
-}
-
-.cover-gallery img{
-    width:100%;
-    height:auto;
-    display:block;
-    background:var(--panel);
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:25px 0 35px;
 }
 
 .cover-gallery.two{
     grid-template-columns:repeat(2,1fr);
 }
 
-.gallery-title{
-    color:var(--muted);
-    font-size:13px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-top:35px;
-    margin-bottom:12px;
+.cover-gallery img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+
+/* =========================
+   PORTADAS CON ENLACE
+   ========================= */
+
+.cover-link{
+    position:relative;
+    display:block;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+
+.cover-link a{
+    display:block;
+    position:relative;
+}
+
+.cover-link img{
+    width:100%;
+    height:auto;
+    display:block;
+    transition:
+        transform .3s ease,
+        filter .3s ease;
+}
+
+.cover-link span{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:13px 15px;
+    background:rgba(0,0,0,.85);
+    color:#fff;
+    text-align:center;
+    font-size:12px;
+    letter-spacing:2px;
+    opacity:0;
+    transform:translateY(100%);
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.cover-link:hover img{
+    transform:scale(1.02);
+    filter:brightness(.55);
+}
+
+.cover-link:hover span{
+    opacity:1;
+    transform:translateY(0);
 }
 
 footer{
@@ -479,11 +506,6 @@ footer{
         grid-template-columns:1fr;
         gap:5px;
     }
-
-    .cover-gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
 }
 
 @media(max-width:500px){
@@ -530,15 +552,20 @@ footer{
     }
 
     .logo-gallery,
-    .photo-gallery,
     .cover-gallery,
     .cover-gallery.two{
         grid-template-columns:1fr;
     }
 
+    .cover-link span{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -558,11 +585,13 @@ footer{
 </div>
 
 <div class="search">
+
 <input
 id="searchInput"
 type="search"
 placeholder="Buscar en el archivo..."
 aria-label="Buscar en el archivo">
+
 </div>
 
 </div>
@@ -585,11 +614,13 @@ MC, letrista, productor musical y beatmaker originario de
 </p>
 
 <div class="hero-meta">
+
 <div class="tag">MC</div>
 <div class="tag">LETRISTA</div>
 <div class="tag">PRODUCTOR</div>
 <div class="tag">BEATMAKER</div>
 <div class="tag">HIP HOP UNDERGROUND</div>
+
 </div>
 
 </div>
@@ -631,7 +662,6 @@ a las actuales.
 </div>
 
 </section>
-
 
 <section id="primeros">
 
@@ -678,7 +708,6 @@ PSTEEL · Ciudad Juárez · 2008
 </div>
 
 </section>
-
 
 <section id="identidades">
 
@@ -730,8 +759,6 @@ La transición <strong>MC Steel → PSTEEL</strong> forma parte de la propia
 historia del artista y no debe interpretarse como dos carreras independientes.
 </p>
 
-<!-- FOTO PSTEEL 2008 -->
-
 <img
 src="PSTEEL%202008.jpg"
 alt="PSTEEL en 2008"
@@ -744,7 +771,6 @@ PSTEEL · 2008
 </div>
 
 </section>
-
 
 <section id="dub">
 
@@ -817,9 +843,22 @@ Solo una Muestra
 
 <div class="cover-gallery two">
 
+<div class="cover-link">
+
+<a
+href="https://open.spotify.com/intl-es/album/4iI80rrOqQzPuTD8ocYjV7?si=OawKvBrRRzKL5QUVbf_VPg"
+target="_blank"
+rel="noopener noreferrer">
+
 <img
 src="SOLO%20UNA%20FRENTE.jpg"
 alt="Portada frontal de Solo una Muestra">
+
+<span>▶ ESCUCHAR EN SPOTIFY</span>
+
+</a>
+
+</div>
 
 <img
 src="SOLO%20UNA%20TRASERA.JPG"
@@ -841,7 +880,6 @@ una característica importante de la trayectoria de PSTEEL.
 </div>
 
 </section>
-
 
 <section id="cronologia">
 
@@ -909,14 +947,11 @@ cuyo contexto original todavía debe ser determinado.
 
 </section>
 
-
 <section id="catalogo">
 
 <div class="section-number">06 · CATÁLOGO</div>
 
 <h2>Material asociado a MC Steel / PSTEEL</h2>
-
-<!-- THE SOUND POSTER -->
 
 <img
 src="THE%20SOUND%20POSTER.jpg"
@@ -954,7 +989,6 @@ The Soundtrack · 2011
 </div>
 
 </section>
-
 
 <section id="produccion">
 
@@ -1000,9 +1034,22 @@ The Soundtrack · 2011
 
 <div class="cover-gallery">
 
+<div class="cover-link">
+
+<a
+href="https://www.youtube.com/watch?v=QiPuWM7x4Eo&list=PLq3N5SA96FhKWJT9sVIobgrqXyC4slc1D"
+target="_blank"
+rel="noopener noreferrer">
+
 <img
 src="THE%20SOUND%20DELANTERA.jpg"
 alt="Portada delantera de The Soundtrack">
+
+<span>▶ ESCUCHAR EN YOUTUBE</span>
+
+</a>
+
+</div>
 
 <img
 src="THE%20SOUND%20TRASERA.jpg"
@@ -1019,7 +1066,6 @@ participado en la construcción sonora de producciones.
 </div>
 
 </section>
-
 
 <section id="estilo">
 
@@ -1063,7 +1109,6 @@ expresión personal que en la necesidad de pertenecer a una etiqueta determinada
 
 </section>
 
-
 <section id="colaboraciones">
 
 <div class="section-number">09 · COLABORACIONES</div>
@@ -1092,7 +1137,6 @@ distintos artistas y productores de la época.
 </p>
 
 </section>
-
 
 <section id="archivo">
 
@@ -1191,7 +1235,6 @@ y sus redes de colaboración.
 
 </main>
 
-
 <footer>
 
 <strong>PSTEEL</strong><br>
@@ -1204,14 +1247,11 @@ Archivo biográfico y musical en construcción.
 
 </footer>
 
-
 <button
 id="backToTop"
 class="back-top"
 aria-label="Volver arriba">
-↑
-</button>
-
+↑ </button>
 
 <script>
 
