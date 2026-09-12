@@ -339,6 +339,81 @@ blockquote{
     background:var(--panel);
 }
 
+/* =========================
+   LOGOS D.U.B. CREW
+   ========================= */
+
+.logo-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:35px 0;
+}
+
+.logo-gallery img{
+    width:100%;
+    height:auto;
+    display:block;
+    background:var(--panel);
+    padding:20px;
+}
+
+/* =========================
+   GALERÍA FOTOGRÁFICA
+   ========================= */
+
+.photo-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:35px 0;
+}
+
+.photo-gallery img{
+    width:100%;
+    height:auto;
+    display:block;
+    background:var(--panel);
+}
+
+/* =========================
+   PORTADAS
+   ========================= */
+
+.cover-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:35px 0;
+}
+
+.cover-gallery img{
+    width:100%;
+    height:auto;
+    display:block;
+    background:var(--panel);
+}
+
+/* Portadas de dos imágenes */
+.cover-gallery.two{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.gallery-title{
+    color:var(--muted);
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-top:35px;
+    margin-bottom:12px;
+}
+
 footer{
     max-width:var(--max);
     margin:auto;
@@ -405,6 +480,11 @@ footer{
         grid-template-columns:1fr;
         gap:5px;
     }
+
+    .cover-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
 @media(max-width:500px){
@@ -450,6 +530,13 @@ footer{
         margin:25px auto;
     }
 
+    .logo-gallery,
+    .photo-gallery,
+    .cover-gallery,
+    .cover-gallery.two{
+        grid-template-columns:1fr;
+    }
+
 }
 
 </style>
@@ -458,6 +545,7 @@ footer{
 <body>
 
 <nav id="topNav">
+
 <div class="nav-inner">
 
 <div class="logo">PSTEEL</div>
@@ -479,13 +567,16 @@ aria-label="Buscar en el archivo">
 </div>
 
 </div>
+
 </nav>
 
 <header>
 
 <div class="hero">
 
-<div class="eyebrow">Archivo histórico · Hip Hop · Ciudad Juárez</div>
+<div class="eyebrow">
+Archivo histórico · Hip Hop · Ciudad Juárez
+</div>
 
 <h1>PSTEEL</h1>
 
@@ -542,6 +633,7 @@ a las actuales.
 
 </section>
 
+
 <section id="primeros">
 
 <div class="section-number">02 · PRIMEROS AÑOS</div>
@@ -586,9 +678,21 @@ class="archivo-img">
 PSTEEL · Ciudad Juárez · 2008
 </p>
 
+<!-- SEGUNDA FOTO PSTEEL 2008 -->
+
+<img
+src="PSTEEL%202008.jpg"
+alt="PSTEEL en 2008"
+class="archivo-img">
+
+<p class="archivo-caption">
+PSTEEL · 2008
+</p>
+
 </div>
 
 </section>
+
 
 <section id="identidades">
 
@@ -608,17 +712,23 @@ en distinguir entre su <strong>nombre artístico</strong> y su
 
 <div>
 <strong>MC Steel</strong>
-<p class="muted">Nombre utilizado como artista durante una etapa temprana.</p>
+<p class="muted">
+Nombre utilizado como artista durante una etapa temprana.
+</p>
 </div>
 
 <div>
 <strong>MCSTEEL09</strong>
-<p class="muted">Usuario utilizado en Internet durante aquella época.</p>
+<p class="muted">
+Usuario utilizado en Internet durante aquella época.
+</p>
 </div>
 
 <div>
 <strong>PSTEEL</strong>
-<p class="muted">Identidad artística posterior.</p>
+<p class="muted">
+Identidad artística posterior.
+</p>
 </div>
 
 </div>
@@ -637,6 +747,7 @@ historia del artista y no debe interpretarse como dos carreras independientes.
 </div>
 
 </section>
+
 
 <section id="dub">
 
@@ -657,6 +768,24 @@ Los registros disponibles permiten identificar diferentes producciones
 asociadas con D.U.B. Crew durante la segunda mitad de los años 2000 y
 principios de la década siguiente.
 </p>
+
+<!-- LOGOS D.U.B. CREW -->
+
+<div class="gallery-title">
+Archivo visual · D.U.B. Crew
+</div>
+
+<div class="logo-gallery">
+
+<img
+src="DUBC2.jpg"
+alt="Logo de D.U.B. Crew">
+
+<img
+src="DUB1.jpg"
+alt="Logo de D.U.B. Crew">
+
+</div>
 
 <div class="catalog">
 
@@ -687,6 +816,24 @@ principios de la década siguiente.
 
 </div>
 
+<!-- SOLO UNA MUESTRA -->
+
+<div class="gallery-title">
+Solo una Muestra
+</div>
+
+<div class="cover-gallery two">
+
+<img
+src="SOLO%20UNA%20FRENTE.jpg"
+alt="Portada frontal de Solo una Muestra">
+
+<img
+src="SOLO%20UNA%20TRASERA.JPG"
+alt="Portada trasera de Solo una Muestra">
+
+</div>
+
 <p style="margin-top:25px;">
 La relación con Lado Privado no se limita a la interpretación. El proyecto
 también aparece asociado con procesos de producción y trabajo técnico
@@ -702,6 +849,7 @@ una característica importante de la trayectoria de PSTEEL.
 
 </section>
 
+
 <section id="cronologia">
 
 <div class="section-number">05 · CRONOLOGÍA</div>
@@ -711,7 +859,9 @@ una característica importante de la trayectoria de PSTEEL.
 <div class="timeline">
 
 <div class="timeline-item">
+
 <div class="year">2007</div>
+
 <div>
 <strong>Expresión de Líneas</strong><br>
 <strong>Freestyle</strong><br>
@@ -719,31 +869,41 @@ una característica importante de la trayectoria de PSTEEL.
 <strong>Desahogo</strong><br>
 <strong>Qué Viene</strong>
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="year">2008</div>
+
 <div>
 <strong>MC Steel y Mila – Freestyle</strong>
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="year">2009</div>
+
 <div>
 <strong>Golpes Rítmicos</strong> — feat. Doble N<br>
 <strong>Crudas Realidades</strong>
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="year">2010</div>
+
 <div>
 <strong>Busco</strong><br>
 <strong>Quién Regresa</strong><br>
 <strong>El Conekte</strong> — feat. Wooker &amp; Doble N<br>
 <strong>Dogmatismo</strong>
 </div>
+
 </div>
 
 </div>
@@ -755,6 +915,7 @@ cuyo contexto original todavía debe ser determinado.
 </p>
 
 </section>
+
 
 <section id="catalogo">
 
@@ -789,6 +950,7 @@ cuyo contexto original todavía debe ser determinado.
 </div>
 
 </section>
+
 
 <section id="produccion">
 
@@ -830,6 +992,28 @@ class="produccion-img">
 PSTEEL · Producción / mezcla · 2011
 </p>
 
+<!-- THE SOUNDTRACK -->
+
+<div class="gallery-title">
+The Soundtrack · 2011
+</div>
+
+<div class="cover-gallery">
+
+<img
+src="THE%20SOUND%20DELANTERA.jpg"
+alt="Portada delantera de The Soundtrack">
+
+<img
+src="THE%20SOUND%20TRASERA.jpg"
+alt="Portada trasera de The Soundtrack">
+
+<img
+src="THE%20SOUND%20POSTER.jpg"
+alt="Poster de The Soundtrack">
+
+</div>
+
 <p>
 Esta faceta técnica permite entender su trayectoria desde una perspectiva
 más amplia: PSTEEL no solamente ha escrito y grabado canciones, también ha
@@ -839,6 +1023,7 @@ participado en la construcción sonora de producciones.
 </div>
 
 </section>
+
 
 <section id="estilo">
 
@@ -882,6 +1067,7 @@ expresión personal que en la necesidad de pertenecer a una etiqueta determinada
 
 </section>
 
+
 <section id="colaboraciones">
 
 <div class="section-number">09 · COLABORACIONES</div>
@@ -911,6 +1097,7 @@ distintos artistas y productores de la época.
 
 </section>
 
+
 <section id="archivo">
 
 <div class="section-number">10 · ARCHIVO</div>
@@ -939,17 +1126,23 @@ Por eso, la discografía actualmente identificada debe entenderse como un
 
 <div>
 <strong>MC Steel</strong>
-<p class="muted">Etapa temprana como MC.</p>
+<p class="muted">
+Etapa temprana como MC.
+</p>
 </div>
 
 <div>
 <strong>MCSTEEL09</strong>
-<p class="muted">Huella digital de aquella época.</p>
+<p class="muted">
+Huella digital de aquella época.
+</p>
 </div>
 
 <div>
 <strong>PSTEEL</strong>
-<p class="muted">Identidad artística posterior.</p>
+<p class="muted">
+Identidad artística posterior.
+</p>
 </div>
 
 </div>
@@ -1002,6 +1195,7 @@ y sus redes de colaboración.
 
 </main>
 
+
 <footer>
 
 <strong>PSTEEL</strong><br>
@@ -1014,12 +1208,14 @@ Archivo biográfico y musical en construcción.
 
 </footer>
 
+
 <button
 id="backToTop"
 class="back-top"
 aria-label="Volver arriba">
 ↑
 </button>
+
 
 <script>
 
